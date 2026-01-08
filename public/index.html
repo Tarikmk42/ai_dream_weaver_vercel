@@ -733,11 +733,10 @@
     <script>
         // ========== КОНФИГУРАЦИЯ ==========
         // Для Vercel - используем относительные пути
-        const API_BASE = ''; // Оставляем пустым для относительных путей
-        
-        // В Vercel функции находятся по пути /api/*
-        const SD_API = '/api/sd-proxy';
-        const LLM_API = '/api/llm-proxy';
+        const API_BASE = window.location.origin;
+        const SD_API = API_BASE + '/api/sd-proxy';
+        const LLM_API = API_BASE + '/api/llm-proxy';
+        const HEALTH_API = API_BASE + '/api/health';
         
         console.log('Конфигурация API:', { SD_API, LLM_API });
 
@@ -2006,4 +2005,5 @@
         console.log('Игровое состояние:', gameState);
     </script>
 </body>
+
 </html>
