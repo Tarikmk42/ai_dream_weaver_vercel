@@ -16,14 +16,6 @@
       "destination": "/index.html"
     }
   ],
-  "functions": {
-    "api/sd-proxy.js": {
-      "maxDuration": 30
-    },
-    "api/llm-proxy.js": {
-      "maxDuration": 30
-    }
-  },
   "headers": [
     {
       "source": "/api/(.*)",
